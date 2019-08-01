@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+ <meta HTTP-EQUIV="Content-Type" CONTENT="text/html"; charset="UTF-8">
+ <title>Тренинг (Trening)</title>
+<!-- кнопка button-->
+<!-- blokM1-->
+<style>
+.p { text-align: center; margin-top: 5px;  margin-bottom: 5px; margin-left: 2em; font-size: 20px; color: #b22222;}
+th {text-align: center; background: #dcdcdc;}
+img {display: inline-block;  position: relative; margin: 0 40px}
+
+.buttonV {text-align:center; 
+ background:#CFAF89;
+ font-weight:bold;
+ font-size:16px; line-height: 18px;
+ border:solid 2px #7e5a25; border-radius: .5em;
+ width: 300px; height:25px;
+ display: inline-block; position: relative;
+ cursor: pointer;
+ margin: 5px; padding: 0px;
+ float: left; left: 10%;
+}
+
+.blokV1 { width: 80%; height: 30%;
+    display: none;
+    background: #ccc;
+    position: absolute;
+    z-index:2;
+    border: solid 1px #7e5a25;
+    overflow: auto;
+}
+.blokV1 p { margin: 5px 20px;}
+</style>
+
+<script language="JavaScript">
+function setV1(param, elem) {
+    /*определить стили blokV1 */
+    let xx = document.getElementById(param).style;
+    /*сделать видимым/невидимым blokV1 */
+    xx.display = (xx.display != 'none')? 'none' : 'block';
+
+    /*определить координаты кнопки*/
+    var coords = elem.getBoundingClientRect();
+    /*задать координаты blokV1 */
+    xx.left =coords.left + 'px';
+    xx.top =coords.bottom + 5 +'px';
+}
+</script>
+</head>
+
+<body>
+        <center><span class="p"> Моя тренировка (My trening)</span></center>
+        <!-- Горизонтальная линия слева-->
+        <hr align="center" width= 370px />
+        <button class='buttonV' onclick='setV1("blokV1" , this)'>Показать/скрыть виды шрифтов (Show / hide font types)</button>
+ <div id = 'blokV1' class = 'blokV1' onclick='setV1("blokV1" , this)' STYLE='display: none'>
+        <h1>Виды шрифтов (Types of Fonts):</h1>
+        <p>&#60;b&#62;<b> — Жирный (bold font)</b></p>
+        <p>&#60;i&#62;<i> — Курсив (italic)</i></p>
+        <p>&#60;del&#62;<del> — Удалённый (deleting)</del></p>
+        <p>&#60;strong&#62;<strong> — Важный,значительный (strong)</strong></p>
+        <p>&#60;small&#62;<small> — Маленький (small)</small></p>
+        <p>&#60;sup&#62;<sup> — Надстрочный (superscript)</sup></p>
+        <p>&#60;sub&#62;<sub> — Подстрочный (subscript)</sub></p>
+        <p>&#60;span&#62;<span> — Универсальный строчный элемент, предназначен для выделения отдельных строк, символов или других строчных элементов для дальнейшего изменения их оформления с помощью стилей.</span></p>
+ </div>        
+ 
+ <br /><br /><hr> <!-- горизонтальная линия -->
+        <p>Здесь (here) <br /> перенос строки (the line transfer)</p>
+        <a href="https://www.lostfilm.tv" target="_blank"> lostfilm</a>
+        <p>Нумированный список (numbered list):<p>
+        <ol>
+            <li>Первый (first)</li>
+            <li><b>Второй (second)</b></li>
+            <li>Третий (third)</li>
+        </ol>
+        <p>Не нумированный список (not numbered list):<p>
+        <ul>
+            <li>Первый (first)</li>
+            <li><i>Следующий (next item)</i></li>
+            <li>Следующий (next item)</li>
+        </ul>
+        <br />
+
+        <!-- Картинки с маштабированием пикселями и процентами. Первая с заданной рамкой-->
+ <img src="http://www.sololearn.com/images/tree.jpg"
+      height="50%" width="50%" border="1px" alt="" />
+
+        <img src="http://www.sololearn.com/images/tree.jpg"
+       height="150px" width="150px" alt=""/>
+         <br />
+        <!-- Пробная таблица-->
+        <table border=5>
+            <tr>
+                <td rowspan=2 align=justify><b>web:</b></td>
+                <td><a href="http://www.sololearn.com" target="_blank">html</a></td>
+                <td><a href="http://www.sololearn.com" target="_blank">css</a></td>
+                <td><a href="http://www.sololearn.com" target="_blank">JavaScript</a></td>
+            </tr>
+            <tr>
+                <td><a href="http://www.sololearn.com" target="_blank">sql</a></td>
+                <td colspan=2 align=center><a href="http://www.sololearn.com" target="_blank">php</a></td>
+            </tr> 
+        </table><br />
+<p><b>Мои достижения (My skills)</b><br /></p>
+<ul>
+    <li>HTML
+    <progress min="0" max="100" value="75"></progress>
+    </li>
+</ul>
+        <br />
+
+        <!-- Таблица цвета-->
+        <table border=2>
+            <tr>
+                <th></th><th>красный</th><th>зелёный</th><th>желный</th><th>голубой</th>
+            </tr>
+            <tr>
+                <td>red</td>
+                <td bgcolor="red">1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>green</td>
+                <td>4</td>
+                <td bgcolor="green">3</td>
+                <td>2</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>yellow</td>
+                <td>1</td>
+                <td>2</td>
+                <td bgcolor="yellow">3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>blue</td>
+                <td>4</td>
+                <td>3</td>
+                <td>2</td>
+                <td bgcolor="blue">1</td>
+            </tr>
+        </table>
+        <br />
+
+        <!-- Блочный элемент <div></div> и чуть-чуть css стили-->
+        <div style="background-color:green; color:white; padding:20px; margin: 0 20%">
+        <p>Параграф (paragraph)</p>
+        <p>Ещё один параграф (Another paragraph)</p>
+        </div>
+        <br />
+<div class="thumb-wrap">
+  <h3><span>Видео с ютуба (Media from YouTube):</span></h3>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/5pBcKKiZSGE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+<br />
+<h3>Аудио (Audio)</h3>
+<audio controls>
+    <source src="http://www.sololearn.com/uploads/audio.mp3" type="audio/mp3">
+    <source src="http://www.sololearn.com/uploads/audio.ogg" type="audio/ogg">
+    Данное аудио не поддержимается вашим браузером  (This audio is not supported by your browser)
+</audio>
+<br />
+<h3>Видео (Video)</h3>
+<video controls>
+    <source src="http://www.sololearn.com/uploads/video.mp4" type="video/mp4">
+    <sourse src="http://www.sololearn.com/uploads/video.ogg" type="video/ogg">
+    Данное видео не поддержимается вашим браузером  (This video is not supported by your browser)
+</video>
+</div>
+<br />
+<!-- svg элементы-->
+<p><b>SVG графика:</b></p>
+<ul>
+    <li>Круг</li>
+        <svg width="135" height="104">
+           <circle cx="80" cy="52" r="50" fill="green" />
+        </svg>
+    <li>Прямоугольник</li>
+        <svg width="135" height="70">
+           <rect width="110" height="60" x="20" y="5" fill="green" />
+        </svg>
+    <li>Линия</li>
+        <svg width="120" height="100">
+            <line x1="10" y1="10" x2="110" y2="90" 
+            style="stroke:#000000; stroke-linecap:round; stroke-width:20" />
+        </svg>
+    <li>Фигура из линий</li>
+        <svg width="210" height="80">
+            <polyline style="stroke-linejoin:miter;stroke:violet;
+            stroke-width:12; fill: yellow;"
+            points="100 10, 150 70, 200 10" />
+        </svg>
+    <li>Элипс</li>
+        <svg width="135" height="104">
+           <ellipse cx="80" cy="52" rx="50" ry="30" fill="green" />
+        </svg>
+    <li>Многоугольник</li>
+        <svg width="320" height="220">
+            <polygon points="100 100, 200 200, 300 0" 
+            style="fill: green; stroke:black;" />
+        </svg>
+    <li>Анимация перемещения</li>
+        <svg width="420" height="70">
+           <rect width="110" height="60" y="5" fill="orange">
+               <animate attributeName="x" from="20" to="300"
+               dur="3s" fill="freeze" repeatCount="indefinite"/>
+           </rect>
+        </svg>
+</ul>
+<br />
+<!-- Холст-->
+<p><b>Холст</b></p>
+<canvas id="canvas1" width="110" height="110">
+        </canvas> 
+    <script>
+        var c=document.getElementById("canvas1");
+        var ctx=c.getContext("2d");
+        ctx.fillRect(20,5,100,100);
+    </script>
+<footer>
+        <!-- Формы-->
+        <h3>Форма регистрации (Registration form):</h3>
+        <form>
+               <p>Логин (login):
+                <input type="text" name="login" />
+            </p>
+            <p>Пароль (password):
+                <input type="password" name="password" />
+            </p>
+        </form>
+        <h3>Форма необходимости выбора (Form of necessity to choose):</h3>
+        <form>
+            <input type="radio" name="gender" value="male" /> Мужской (Male) <br />
+            <input type="radio" name="gender" value="female" /> Женский (Female) <br />
+        </form>
+        <h3>Форма обратной связи (Feedback form):</h3>
+        <form>
+            <input type="text" name="name" placeholder="Name" autofocus required /> <br />
+            <input type="email" name="email" placeholder="email@example.com" 
+            autofocus required /> <br />
+            <textarea name="message"> </textarea> <br />
+            <input type="submit" value="send" name="submit" /> <br/>
+        </form>
+</footer>
+</body>
+</html>
